@@ -20,13 +20,14 @@ async function getData() {
 
 // content injection
 const postContainer = document.getElementById("postWrapper");
+
 document.addEventListener("DOMContentLoaded", async () => {
   const apiData = await getData();
 
   apiData.data.reverse().forEach((element) => {
     const { title, body, headerimage } = element.attributes;
-    const container = document.createElement("div");
 
+    const container = document.createElement("div");
     container.classList.add("postContainer");
 
     container.style.backgroundImage = `url('${headerimage.data.attributes.url}')`;
@@ -35,11 +36,27 @@ document.addEventListener("DOMContentLoaded", async () => {
       <div class="titleWrapper">
       <h2 class="postTitle">${title}</h2>
       </div>
-      <p class="postBody">${body[0].children[0].text}</p>
     `;
+
+    const paragraphContainer = document.createElement("div");
+    paragraphContainer.classList.add("paragraphContainer");
+    container.appendChild(paragraphContainer);
+
+    for (let post of body) {
+      let paraElement = document.createElement("p");
+      paraElement.style.padding = "0.5rem";
+      paraElement.style.textAlign = "center";
+      let para = post.children[0].text;
+
+      paraElement.innerText = para;
+      paragraphContainer.append(paraElement);
+    }
 
     container.addEventListener("click", (e) => {
       e.currentTarget.children[1].classList.toggle("visible");
+      e.currentTarget.children[0].classList.toggle("titleVisible");
+      // e.currentTarget.children[1];
+      console.log(e.currentTarget.children);
     });
 
     postContainer.appendChild(container);

@@ -57,29 +57,37 @@ h1 {
 }
 
 #postWrapper {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    row-gap: 50px;
-    height: 100%;
+    /* display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        row-gap: 50px;
+        height: 100%; */
+    width: 80%;
+    margin: auto;
 }
 
 .postContainer {
-    grid-column: 2 / 12;
+    /* grid-column: 2 / 12; */
+    /* min-height: 500px; */
+
 }
 
 .titleWrapper {
-    min-height: 300px;
+    min-height: 200px;
     color: aliceblue;
     display: grid;
     place-items: center;
 }
 
-.postBody {
+.paragraphContainer {
     display: none;
-    background-color: aliceblue;
+    background-color: antiquewhite;
 }
 
 .visible {
     color: aqua;
     display: block;
+}
+
+.titleVisible {
+    height: 500px;
 }
