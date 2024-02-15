@@ -29,12 +29,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     container.classList.add("postContainer");
 
+    container.style.backgroundImage = `url('${headerimage.data.attributes.url}')`;
+
     container.innerHTML = `
       <div class="titleWrapper">
       <h2 class="postTitle">${title}</h2>
-      <img class="postImg" src="${headerimage.data.attributes.url}" >
       </div>
-    
       <p class="postBody">${body[0].children[0].text}</p>
     `;
 
