@@ -6,6 +6,8 @@ window.addEventListener("scroll", () =>
 );
 
 // api call
+//let apiUrl = "./strapi.json";
+
 let apiUrl =
   "https://strapi-production-3931.up.railway.app/api/posts/?populate=*";
 
@@ -33,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     container.style.backgroundImage = `url('${headerimage.data.attributes.url}')`;
 
     container.innerHTML = `
-      <div class="titleWrapper">
+      <div class="posttitleWrapper">
       <h2 class="postTitle">${title}</h2>
       </div>
     `;
@@ -55,10 +57,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     container.addEventListener("click", (e) => {
       e.currentTarget.children[1].classList.toggle("visible");
       e.currentTarget.children[0].classList.toggle("titleVisible");
-      // e.currentTarget.children[1];
+
       console.log(e.currentTarget.children);
     });
 
     postContainer.appendChild(container);
+  });
+});
+
+function scrollTo(location) {
+  let targetEl = document.getElementById(location);
+  targetEl.scrollIntoView;
+}
+
+let navBtns = document.querySelectorAll(".navText");
+
+navBtns.forEach(function (btn) {
+  btn.addEventListener("click", (e) => {
+    console.log(e);
+    // scrollTo(e.target.id);
   });
 });
