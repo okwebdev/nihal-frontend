@@ -6,18 +6,32 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 img {
     display: block;
     max-width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
 body {
     background-color: black;
-    background-image: url("./src/images/IMG_6325.jpg");
+    background-image: url("./src/images/IMG_5291.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+}
+
+h2 {
+    color: antiquewhite;
+    text-align: center;
 }
 
 
@@ -27,29 +41,42 @@ body::-webkit-scrollbar {
 }
 
 .header {
-    /* background-color: bisque; */
     width: 100%;
     min-height: 300px;
     display: grid;
     place-items: center;
+
 }
 
 .spacer {
     height: 100%;
     width: 100%;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); */
+}
+
+#spacer2 {
+    display: grid;
+    align-items: end;
+    justify-content: end;
+    max-bottom: 20px;
 }
 
 .mainTitle {
     text-align: center;
+    background-color: #b3a6988c;
+
+
+
+
 }
 
 h1 {
     padding: 1rem;
     font-size: 3rem;
     margin-bottom: 50px;
+
 }
 
 .headerContainer {
@@ -62,8 +89,14 @@ h1 {
     height: 100vh;
     display: flex;
     flex-direction: column;
+
+
 }
 
+.photocredit p {
+    position: absolute;
+
+}
 
 .fixed {
     position: fixed;
@@ -73,30 +106,44 @@ h1 {
 }
 
 .navbar {
-
+    font-size: 1.2rem;
     width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    top: 10px;
+    padding-bottom: 10px;
+
+
 
 }
 
 #emailSignup {
-    height: 80vh;
+    color: antiquewhite;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
 
-    background: rgb(1, 3, 103);
-    background: linear-gradient(180deg, rgba(1, 3, 103, 1) 35%, rgba(67, 33, 77, 1) 100%);
-    /* background-image: url("./src/images/Screenshot\ 2024-02-09\ at\ 17.00.39.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed; */
+.contactContentWrapper {
+    background-color: #b3a6988c;
+    width: 60%;
+    margin: auto;
+}
 
+.contactIcon {
+    font-size: 20px;
 }
 
 #postWrapper {
-    background-color: rgba(67, 33, 77, 1);
+    background-color: #B3A698;
     color: antiquewhite;
+    align-items: center;
+
 }
 
 .postContainer {
@@ -118,14 +165,11 @@ h1 {
 
 .paragraphContainer {
     max-height: 0px;
-    /* background-color: antiquewhite; */
+    background-color: #B3A698;
     transition: max-height 0.gs ease-in-out;
     transition-duration: 0.2s;
     overflow: hidden;
 }
-
-
-
 
 .visible {
     color: aqua;
@@ -137,6 +181,7 @@ h1 {
 }
 
 .writingTitle {
+    padding-top: 30px;
     height: 200px;
     text-align: center;
 }

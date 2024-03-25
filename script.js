@@ -6,10 +6,10 @@ window.addEventListener("scroll", () =>
 );
 
 // api call
-//let apiUrl = "./strapi.json";
+let apiUrl = "./strapi.json";
 
-let apiUrl =
-  "https://strapi-production-3931.up.railway.app/api/posts/?populate=*";
+// let apiUrl =
+//   "https://strapi-production-3931.up.railway.app/api/posts/?populate=*";
 
 async function getData() {
   try {

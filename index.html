@@ -16,10 +16,14 @@
           <h1>Nihal El Aasar</h1>
           <div class="navbar" id="navBar">
             <div class="navElement" id="writing">
-              <p class="navText" id="writing">Writing</p>
+              <a href="#postWrapper">
+                <p class="navText" id="writing">Writing</p></a
+              >
             </div>
             <div class="navElement" id="contact">
-              <p class="navText" id="contact">Contact</p>
+              <a href="#emailSignup">
+                <p class="navText" id="contact">Contact</p></a
+              >
             </div>
             <div class="navElement">
               <p class="navText" id="music">Music</p>
@@ -27,14 +31,32 @@
           </div>
         </div>
       </div>
-      <div class="spacer"></div>
+      <div class="spacer" id="spacer2">
+        <a href="" id="photocredit"> <p>photograph by Lina Geoushy</p></a>
+      </div>
     </div>
-    <div id="emailSignup"></div>
+    <div id="emailSignup">
+      <div class="contactContentWrapper">
+        <p>Nihal El Aasar is a writer and researcher based in London</p>
+        <br />
+        <ion-icon class="contactIcon" name="mail-outline"></ion-icon>
+        <br />
+        <ion-icon class="contactIcon" name="logo-twitter"></ion-icon>
+      </div>
+    </div>
 
     <div id="postWrapper">
       <div class="writingTitle">
         <h2>Writing</h2>
       </div>
     </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
